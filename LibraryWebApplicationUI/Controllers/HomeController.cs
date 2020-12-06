@@ -1,4 +1,5 @@
 ﻿using LibraryWebApplicationUI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace LibraryWebApplicationUI.Controllers
 {
+    //[Authorize(Roles = "User")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

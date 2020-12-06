@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
-using LibraryWebApplicationUI.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
+using LibraryWebApplicationUI.Models;
 
 namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account.Manage
 {
@@ -23,7 +24,18 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account.Manage
             _signInManager = signInManager;
         }
 
+        [Display(Name = "Ник")]
         public string Username { get; set; }
+
+        [Display(Name = "Имя")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Фамилия")]
+        public string SecondName { get; set; }
+
+        [Display(Name = "Дата рождения")]
+        [DataType(DataType.Date)]
+        public DateTime Birthdate { get; set; }
 
         [TempData]
         public string StatusMessage { get; set; }
@@ -34,7 +46,7 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account.Manage
         public class InputModel
         {
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Номер телефона")]
             public string PhoneNumber { get; set; }
         }
 
@@ -44,6 +56,9 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account.Manage
             var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
             Username = userName;
+            FirstName = user.FirstName;
+            SecondName = user.SecondName;
+            Birthdate = user.Birthdate;
 
             Input = new InputModel
             {

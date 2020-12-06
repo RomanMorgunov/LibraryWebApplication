@@ -56,6 +56,9 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
                     protocol: Request.Scheme);
             }
 
+            // Add standart role to user
+            await _userManager.AddToRoleAsync(user, "User");
+
             return Page();
         }
     }
