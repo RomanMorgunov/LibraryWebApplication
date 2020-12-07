@@ -1,0 +1,32 @@
+﻿.book {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #eaedf1;
+    border-radius: 20px;
+}
+
+    .book img {
+        margin-right: 1rem;
+        width: 12rem;
+    }
+
+    .book .book-info {
+        align-self: stretch;
+    }
+
+    .book .book-name a {
+        text-decoration: none;
+        color: black;
+    }
+
+        .book .book-name a:hover {
+            text-decoration: none;
+            transition: 0.3s;
+            color: #6c43af;
+        }
+
+    .book .book-authors {
+        color: #b34d00;
+    }

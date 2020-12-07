@@ -1,7 +1,4 @@
 ﻿@inject Microsoft.AspNetCore.Identity.SignInManager<ApplicationUser> SignInManager
-@{
-    bool hasAdminRole = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
-}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +8,7 @@
     <title>@ViewData["Title"] - LibraryWebApplicationUI</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/books.css" />
 </head>
 <body>
     <header>
@@ -24,14 +22,14 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
                         @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                         {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CreateBook">Добавить книгу</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="EditBook">Изменить книгу</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Roles" asp-action="Index">Роли</a>
                             </li>
