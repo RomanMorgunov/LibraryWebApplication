@@ -32,6 +32,7 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account.Manage
         {
             [Required]
             [DataType(DataType.Password)]
+            [Display(Name = "Пароль")]
             public string Password { get; set; }
         }
 
