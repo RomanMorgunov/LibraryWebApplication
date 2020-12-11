@@ -15,12 +15,12 @@
                 <div asp-validation-summary="All" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Input.Email"></label>
-                    <input asp-for="Input.Email" class="form-control" />
+                    <input asp-for="Input.Email" class="form-control" id="email" />
                     <span asp-validation-for="Input.Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Input.Password"></label>
-                    <input asp-for="Input.Password" class="form-control" />
+                    <input asp-for="Input.Password" class="form-control" id="password" />
                     <span asp-validation-for="Input.Password" class="text-danger"></span>
                 </div>
                 <div class="form-group">
@@ -32,14 +32,14 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Авторизоваться</button>
+                    <button type="submit" class="btn btn-primary" id="login">Авторизоваться</button>
                 </div>
                 <div class="form-group">
                     <p>
                         <a id="forgot-password" asp-page="./ForgotPassword">Забыли свой пароль?</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Зарегистрируйтесь как новый пользователь</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" id="register">Зарегистрируйтесь как новый пользователь</a>
                     </p>
                 </div>
             </form>
