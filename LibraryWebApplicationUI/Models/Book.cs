@@ -6,27 +6,27 @@ namespace LibraryWebApplicationUI.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле {0} является обязательным.")]
         [DataType(DataType.Text)]
         [Display(Name = "Название")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле {0} является обязательным.")]
         [DataType(DataType.Text)]
         [Display(Name = "Авторы")]
         public string Authors { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле {0} является обязательным.")]
         [DataType(DataType.Text)]
         [Display(Name = "Описание")]
         public string Description { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле {0} является обязательным.")]
         [DataType(DataType.Text)]
         [Display(Name = "Язык")]
         public string Language { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Поле {0} является обязательным.")]
         [DataType(DataType.Text)]
         [Display(Name = "Жанр")]
         public string Genre { get; set; }

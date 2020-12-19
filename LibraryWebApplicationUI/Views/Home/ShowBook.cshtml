@@ -12,21 +12,21 @@
         }
         <img src="@imageDataUrl">
         <div class="book-info">
-            <h4 class="book-name"><a href="#">@Model.Name</a></h4>
-            <h5 class="book-authors">@Model.Authors</h5>
-            <h6 class="book-language">Язык: @Model.Language</h6>
-            <h6 class="book-genre">Жанр: @Model.Genre</h6>
-            <span class="book-description">@Model.Description</span>
+            <h4 class="book-name" id="book-name">@Model.Name</h4>
+            <h5 class="book-authors" id="book-authors">@Model.Authors</h5>
+            <h6 class="book-language" id="book-language">Язык: @Model.Language</h6>
+            <h6 class="book-genre" id="book-genre">Жанр: @Model.Genre</h6>
+            <span class="book-description" id="book-description">@Model.Description</span>
         </div>
     </div>
     @if (!SignInManager.IsSignedIn(User))
     {
-        <span style="color: red">Скачать книгу могут только зарегистрированные пользователи.</span>
+        <span style="color: red" id="no-access-to-book-label">Скачать книгу могут только зарегистрированные пользователи.</span>
     }
     @if (SignInManager.IsSignedIn(User) && User.IsInRole("User"))
     {
         <form asp-action="DownloadBook" asp-route-id="@Model.Id" method="get">
-            <button type="submit" class="btn btn-primary" style="display: inline-block">
+            <button type="submit" class="btn btn-primary" style="display: inline-block" id="download-book">
                 Скачать
             </button>
         </form>
@@ -34,12 +34,12 @@
     @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
     {
         <form asp-action="DeleteBook" asp-route-id="@Model.Id" method="get">
-            <button type="submit" class="btn btn-danger" style="float: right; display: inline-block">
+            <button type="submit" class="btn btn-danger" style="float: right; display: inline-block" id="delete-book">
                 Удалить
             </button>
         </form>
         <form asp-action="EditBook" asp-route-id="@Model.Id" method="get">
-            <button type="submit" class="btn btn-info" style="float: right; display: inline-block">
+            <button type="submit" class="btn btn-info" style="float: right; display: inline-block" id="edit-book">
                 Редактировать
             </button>
         </form>

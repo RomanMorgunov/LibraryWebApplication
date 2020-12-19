@@ -20,6 +20,8 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
+        private const int MaxAge = 120;
+
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
@@ -47,11 +49,13 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
         public class InputModel
         {
             [Required]
+            [StringLength(100, ErrorMessage = "{0} должно иметь длину от до {1} символов.")]
             [DataType(DataType.Text)]
             [Display(Name = "Имя")]
             public string FirstName { get; set; }
 
             [Required]
+            [StringLength(100, ErrorMessage = "{0} должна иметь длину от до {1} символов.")]
             [DataType(DataType.Text)]
             [Display(Name = "Фамилия")]
             public string SecondName { get; set; }
@@ -91,6 +95,13 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+            DateTime birthdate = Input.Birthdate;
+            if (birthdate > DateTime.Now || birthdate.AddYears(MaxAge) < DateTime.Now)
+            {
+                ModelState.AddModelError("Birthdate",
+                    string.Format("Дата рождения не может быть позже текщего момента, и возраст не может превышать {0} лет.", MaxAge));
+            }
+
             returnUrl = returnUrl ?? Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)

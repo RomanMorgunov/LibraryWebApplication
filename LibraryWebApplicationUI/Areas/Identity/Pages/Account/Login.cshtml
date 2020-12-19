@@ -12,7 +12,7 @@
             <form id="account" method="post">
                 <h4>Используйте локальную учетную запись для входа в систему.</h4>
                 <hr />
-                <div asp-validation-summary="All" class="text-danger"></div>
+                <div asp-validation-summary="All" class="text-danger" id="validation-summary"></div>
                 <div class="form-group">
                     <label asp-for="Input.Email"></label>
                     <input asp-for="Input.Email" class="form-control" id="email" />

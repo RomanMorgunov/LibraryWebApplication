@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWebApplicationUI", "LibraryWebApplicationUI\LibraryWebApplicationUI.csproj", "{8D1ED3C6-60E4-43DF-B823-FEFCB3B32679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowLibraryWebApplication", "SpecFlowLibraryWebApplication\SpecFlowLibraryWebApplication.csproj", "{8E5053EC-B015-4570-A38E-7FB0AED7148A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlowLibraryWebApplication", "SpecFlowLibraryWebApplication\SpecFlowLibraryWebApplication.csproj", "{8E5053EC-B015-4570-A38E-7FB0AED7148A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,7 +18,6 @@ Global
 		{8D1ED3C6-60E4-43DF-B823-FEFCB3B32679}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D1ED3C6-60E4-43DF-B823-FEFCB3B32679}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8E5053EC-B015-4570-A38E-7FB0AED7148A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E5053EC-B015-4570-A38E-7FB0AED7148A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E5053EC-B015-4570-A38E-7FB0AED7148A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E5053EC-B015-4570-A38E-7FB0AED7148A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

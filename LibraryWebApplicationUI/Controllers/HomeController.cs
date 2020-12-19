@@ -1,9 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
+﻿using System.IO;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -17,8 +14,9 @@ namespace LibraryWebApplicationUI.Controllers
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
-
         private readonly ILogger<HomeController> _logger;
+
+        public ApplicationDbContext ApplicationDbContext => _context;
 
         public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
@@ -51,13 +49,13 @@ namespace LibraryWebApplicationUI.Controllers
             var coverImageFile = Request.Form.Files["cover-image"];
             if (coverImageFile == null)
             {
-                ModelState.AddModelError("CoverImage", "Поле не должно быть пустым.");
+                ModelState.AddModelError("CoverImage", "Поле Обложка является обязательным.");
             }
 
             var bookFile = Request.Form.Files["book-file"];
             if (bookFile == null)
             {
-                ModelState.AddModelError("File", "Поле не должно быть пустым.");
+                ModelState.AddModelError("File", "Поле Файл является обязательным.");
             }
 
             if (!ModelState.IsValid)
@@ -152,6 +150,11 @@ namespace LibraryWebApplicationUI.Controllers
         [HttpPost]
         public IActionResult EditBook(Book book)
         {
+            if (!ModelState.IsValid)
+            {
+                return View("EditBook");
+            }
+
             Book oldBook = _context.Books.AsNoTracking().FirstOrDefault(b => b.Id == book.Id);
 
             var coverImageFile = Request.Form.Files["cover-image"];

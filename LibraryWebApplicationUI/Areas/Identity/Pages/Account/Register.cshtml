@@ -8,46 +8,46 @@
 
 <div class="row">
     <div class="col-md-8">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <form asp-route-returnUrl="@Model.ReturnUrl" method="post" id="register-form">
             <h4>Создание нового аккаунта.</h4>
             <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
+            <div asp-validation-summary="All" class="text-danger" id="validation-summary"></div>
             <div class="form-group">
                 <label asp-for="Input.FirstName"></label>
-                <input asp-for="Input.FirstName" class="form-control" />
+                <input asp-for="Input.FirstName" class="form-control" id="first-name" />
                 <span asp-validation-for="Input.FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.SecondName"></label>
-                <input asp-for="Input.SecondName" class="form-control" />
+                <input asp-for="Input.SecondName" class="form-control" id="second-name" />
                 <span asp-validation-for="Input.SecondName" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.Birthdate"></label>
-                <input asp-for="Input.Birthdate" class="form-control" />
+                <input asp-for="Input.Birthdate" class="form-control" id="birthdate" />
                 <span asp-validation-for="Input.Birthdate" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
-                <input asp-for="Input.Email" class="form-control" />
+                <input asp-for="Input.Email" class="form-control" id="email" />
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.PhoneNumber"></label>
-                <input asp-for="Input.PhoneNumber" class="form-control" />
+                <input asp-for="Input.PhoneNumber" class="form-control" id="phone-number" />
                 <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.Password"></label>
-                <input asp-for="Input.Password" class="form-control" />
+                <input asp-for="Input.Password" class="form-control" id="password" />
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Input.ConfirmPassword"></label>
-                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                <input asp-for="Input.ConfirmPassword" class="form-control" id="confirm-password" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+            <button type="submit" class="btn btn-primary" id="register">Зарегистрироваться</button>
         </form>
     </div>
 </div>

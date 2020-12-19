@@ -20,22 +20,22 @@ namespace SpecFlowLibraryWebApplication.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.5.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Login")]
-    public partial class LoginFeature
+    [NUnit.Framework.DescriptionAttribute("BookPage")]
+    public partial class BookPageFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "Login.feature"
+#line 1 "BookPage.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Login", "    I want to log in to the site.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "BookPage", "    I want to check if there are elements on a page with a book.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -83,16 +83,16 @@ namespace SpecFlowLibraryWebApplication.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Successful login as administrator")]
+        [NUnit.Framework.DescriptionAttribute("Successful check as administrator")]
         [NUnit.Framework.CategoryAttribute("success")]
         [NUnit.Framework.CategoryAttribute("admin")]
-        public virtual void SuccessfulLoginAsAdministrator()
+        public virtual void SuccessfulCheckAsAdministrator()
         {
             string[] tagsOfScenario = new string[] {
                     "success",
                     "admin"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful login as administrator", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful check as administrator", null, tagsOfScenario, argumentsOfScenario);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -126,33 +126,39 @@ this.FeatureBackground();
     testRunner.And("I press element with id \"login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 13
-    testRunner.Then("element with id \"login-name\" has text \"Привет rom4ik9994@gmail.com!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When("I open page \"Home/Index\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 14
-    testRunner.And("element with id \"logout\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I press element with class \"book-header\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 15
-    testRunner.And("element with id \"add-book\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("element with id \"no-access-to-book-label\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 16
-    testRunner.And("element with id \"roles\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("element with id \"download-book\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 17
+    testRunner.And("element with id \"delete-book\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 18
+    testRunner.And("element with id \"edit-book\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Successful login as user")]
+        [NUnit.Framework.DescriptionAttribute("Successful check as user")]
         [NUnit.Framework.CategoryAttribute("success")]
         [NUnit.Framework.CategoryAttribute("user")]
-        public virtual void SuccessfulLoginAsUser()
+        public virtual void SuccessfulCheckAsUser()
         {
             string[] tagsOfScenario = new string[] {
                     "success",
                     "user"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful login as user", null, tagsOfScenario, argumentsOfScenario);
-#line 20
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful check as user", null, tagsOfScenario, argumentsOfScenario);
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -175,41 +181,49 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 21
+#line 23
     testRunner.When("I enter \"vip.roman99@mail.ru\" in element with id \"email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 22
+#line 24
     testRunner.And("I enter \"r47qkuDLJFx7F5U!\" in element with id \"password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 23
+#line 25
     testRunner.And("I press element with id \"login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 24
-    testRunner.Then("element with id \"login-name\" has text \"Привет vip.roman99@mail.ru!\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 25
-    testRunner.And("element with id \"logout\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
 #line 26
-    testRunner.And("element with id \"add-book\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I open page \"Home/Index\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 27
-    testRunner.And("element with id \"roles\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I press element with class \"book-header\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 28
+    testRunner.Then("element with id \"no-access-to-book-label\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 29
+    testRunner.And("element with id \"download-book\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 30
+    testRunner.And("element with id \"delete-book\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 31
+    testRunner.And("element with id \"edit-book\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Unsuccessful login")]
-        [NUnit.Framework.CategoryAttribute("fail")]
-        public virtual void UnsuccessfulLogin()
+        [NUnit.Framework.DescriptionAttribute("Successful check as anonymous")]
+        [NUnit.Framework.CategoryAttribute("success")]
+        [NUnit.Framework.CategoryAttribute("anonymous")]
+        public virtual void SuccessfulCheckAsAnonymous()
         {
             string[] tagsOfScenario = new string[] {
-                    "fail"};
+                    "success",
+                    "anonymous"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unsuccessful login", null, tagsOfScenario, argumentsOfScenario);
-#line 30
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Successful check as anonymous", null, tagsOfScenario, argumentsOfScenario);
+#line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -232,17 +246,23 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 31
-    testRunner.When("I enter \"WrongEmail@gmail.com\" in element with id \"email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 36
+    testRunner.When("I open page \"Home/Index\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 32
-    testRunner.And("I enter \"WrongPassword!!\" in element with id \"password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line 37
+    testRunner.And("I press element with class \"book-header\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
-#line 33
-    testRunner.And("I press element with id \"login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line 38
+    testRunner.Then("element with id \"no-access-to-book-label\" exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 34
-    testRunner.Then("element with id \"validation-summary\" has text \"Неудачная попытка входа.\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 39
+    testRunner.And("element with id \"download-book\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 40
+    testRunner.And("element with id \"delete-book\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 41
+    testRunner.And("element with id \"edit-book\" does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
             }
             this.ScenarioCleanup();
