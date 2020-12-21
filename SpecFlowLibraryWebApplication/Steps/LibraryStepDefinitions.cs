@@ -14,6 +14,7 @@ namespace SpecFlowLibraryWebApplication
     public sealed class LibraryStepDefinitions
     {
         private const string UrlBase = "https://localhost:5001/";
+        private const string ValueAttributeInInput = "value";
         
         private readonly ScenarioContext _scenarioContext;
 
@@ -27,6 +28,9 @@ namespace SpecFlowLibraryWebApplication
         public LibraryStepDefinitions(ScenarioContext scenarioContext)
         {
             _scenarioContext = scenarioContext;
+            //ChromeOptions options = new ChromeOptions();
+            //options.AddArgument("--headless");
+            //_scenarioContext["ChromeDriver"] = new ChromeDriver(options);
             _scenarioContext["ChromeDriver"] = new ChromeDriver();
         }
 
@@ -87,19 +91,74 @@ namespace SpecFlowLibraryWebApplication
             driver.FindElementByClassName(elementClass).Click();
         }
 
-        [When(@"I am on the page ""(.*)""")]
+        [When(@"I am waiting for ""(.*)"" milliseconds")]
+        public void WhenIAmWaitingForMilliseconds(int millisecondsTimeout)
+        {
+            System.Threading.Thread.Sleep(millisecondsTimeout);
+        }
+
+        [When(@"I click on the button the adjacent column of the element name ""(.*)""")]
+        public void WhenIClickOnTheButtonWithTheTextTheAdjacentColumnOfTheItem(string elementName)
+        {
+            const string TableRowTag = "tr";
+            const string TableDataTag = "td";
+            const string FormTag = "form";
+            const string ButtonTag = "button";
+
+            ChromeDriver driver = SeleiumDriver;
+
+            var rows = driver.FindElementsByTagName(TableRowTag);
+            var soughtRow = (from row in rows
+                             where row.FindElement(By.TagName(TableDataTag)).Text == elementName
+                             select row).First();
+            var button = soughtRow.FindElement(By.TagName(FormTag)).FindElement(By.TagName(ButtonTag));
+
+            button.Click();
+        }
+
+        [When(@"I click on the link the adjacent column of the element name ""(.*)""")]
+        public void WhenIClickOnTheLinkWithTheTextTheAdjacentColumnOfTheElementName(string elementName)
+        {
+            const string TableRowTag = "tr";
+            const string TableDataTag = "td";
+            const string LinkTag = "a";
+
+            ChromeDriver driver = SeleiumDriver;
+
+            var rows = driver.FindElementsByTagName(TableRowTag);
+            var soughtRow = (from row in rows
+                             where row.FindElement(By.TagName(TableDataTag)).Text == elementName
+                             select row).First();
+            var link = soughtRow.FindElement(By.TagName(LinkTag));
+
+            link.Click();
+        }
+
+        [When(@"I check the checkbox with the class ""(.*)"" and the name ""(.*)""")]
+        public void WhenICheckTheBoxWithTheClassAndTheName(string className, string checkboxText)
+        {
+            ChromeDriver driver = SeleiumDriver;
+
+            var checkboxes = driver.FindElementsByClassName(className);
+            for (int i = 0; i < checkboxes.Count; i++)
+            {
+                string s = checkboxes[i].Text;
+            }
+
+            var adminCheckbox = checkboxes.Where(e => e.GetAttribute(ValueAttributeInInput) == checkboxText).First();
+            if (!adminCheckbox.Selected)
+            {
+                adminCheckbox.Click();
+            }
+        }
+
+        [Then(@"I am on the page ""(.*)""")]
         public void WhenIAmOnPage(string urlPart)
         {
             ChromeDriver driver = SeleiumDriver;
             string expected = GetFullUrl(urlPart);
 
             Assert.AreEqual(expected, driver.Url);
-        }
-
-        [When(@"I am waiting for ""(.*)"" milliseconds")]
-        public void WhenIAmWaitingForMilliseconds(int millisecondsTimeout)
-        {
-            System.Threading.Thread.Sleep(millisecondsTimeout);
         }
 
         [Then(@"I am not on the page ""(.*)""")]
@@ -132,13 +191,47 @@ namespace SpecFlowLibraryWebApplication
         }
 
         [Then(@"I find book with name ""(.*)""")]
-        public void ThenIFindBookWithName(string bookName)
+        public void ThenIFindBookWithName(string elementName)
+        {
+            ChromeDriver driver = SeleiumDriver;
+
+            var actual = driver.FindElementsByLinkText(elementName);
+
+            CollectionAssert.IsNotEmpty(actual);
+        }
+
+        [Then(@"I find book with tag ""(.*)"" and name ""(.*)""")]
+        public void ThenIFindBookWithTagAndName(string tag, string elementName)
+        {
+            ChromeDriver driver = SeleiumDriver;
+
+            var elements = driver.FindElementsByTagName(tag);
+            var actual = (from e in elements
+                          select e.Text);
+
+            CollectionAssert.Contains(actual, elementName);
+        }
+
+        [Then(@"I can not find book with tag ""(.*)"" and name ""(.*)""")]
+        public void ThenICanNotFindBookWithTagAndName(string tag, string elementName)
+        {
+            ChromeDriver driver = SeleiumDriver;
+
+            var elements = driver.FindElementsByTagName(tag);
+            var actual = (from e in elements
+                          select e.Text);
+
+            CollectionAssert.DoesNotContain(actual, elementName);
+        }
+
+        [Then(@"I can not find book with name ""(.*)""")]
+        public void ThenICanNotFindBookWithName(string bookName)
         {
             ChromeDriver driver = SeleiumDriver;
 
             var actual = driver.FindElementsByLinkText(bookName);
 
-            CollectionAssert.IsNotEmpty(actual);
+            CollectionAssert.IsEmpty(actual);
         }
 
         [Then(@"element with id ""(.*)"" does not exist")]
@@ -152,6 +245,17 @@ namespace SpecFlowLibraryWebApplication
             }
 
             Assert.Throws<NoSuchElementException>(TryFindElement);
+        }
+
+        [Then(@"I validate that the checkbox with the class ""(.*)"" has role ""(.*)""")]
+        public void ThenIValidateThatTheCheckboxWithTheClassHasRole(string className, string checkboxText)
+        {
+            ChromeDriver driver = SeleiumDriver;
+
+            var checkboxes = driver.FindElementsByClassName(className);
+            var adminCheckbox = checkboxes.Where(e => e.GetAttribute(ValueAttributeInInput) == checkboxText).First();
+
+            Assert.IsTrue(adminCheckbox.Selected);
         }
     }
 }

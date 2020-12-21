@@ -21,6 +21,7 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         private const int MaxAge = 120;
+        private const string BirthdateNameInModel = "Input.Birthdate";
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -42,40 +43,41 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
         [BindProperty]
         public InputModel Input { get; set; }
 
+        public bool SendConfirmAccountLinkToMail { get; set; }
+
         public string ReturnUrl { get; set; }
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Поле {0} является обязательным.")]
             [StringLength(100, ErrorMessage = "{0} должно иметь длину от до {1} символов.")]
             [DataType(DataType.Text)]
             [Display(Name = "Имя")]
             public string FirstName { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Поле {0} является обязательным.")]
             [StringLength(100, ErrorMessage = "{0} должна иметь длину от до {1} символов.")]
             [DataType(DataType.Text)]
             [Display(Name = "Фамилия")]
             public string SecondName { get; set; }
 
-            [Required]
             [DataType(DataType.Date)]
             [Display(Name = "Дата рождения")]
             public DateTime Birthdate { get; set; }
 
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Поле {0} является обязательным.")]
+            [EmailAddress(ErrorMessage = "Поле {0} заполнено неверно.")]
             [Display(Name = "Email")]
             public string Email { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Поле {0} является обязательным.")]
             [Phone]
             [Display(Name = "Номер телефона")]
             public string PhoneNumber { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Поле {0} является обязательным.")]
             [StringLength(100, ErrorMessage = "{0} должен иметь длину от {2} до {1} символов.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Пароль")]
@@ -95,10 +97,11 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+            ModelState.Remove(BirthdateNameInModel);
             DateTime birthdate = Input.Birthdate;
             if (birthdate > DateTime.Now || birthdate.AddYears(MaxAge) < DateTime.Now)
             {
-                ModelState.AddModelError("Birthdate",
+                ModelState.AddModelError(BirthdateNameInModel,
                     string.Format("Дата рождения не может быть позже текщего момента, и возраст не может превышать {0} лет.", MaxAge));
             }
 
@@ -129,8 +132,12 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
+                    SendConfirmAccountLinkToMail = false;
+                    if (SendConfirmAccountLinkToMail)
+                    {
+                        await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    }
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

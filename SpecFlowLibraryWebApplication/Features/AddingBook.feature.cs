@@ -83,16 +83,16 @@ namespace SpecFlowLibraryWebApplication.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Unsuccessful check adding a book as user")]
+        [NUnit.Framework.DescriptionAttribute("Unsuccessful check adding a book as anonymous")]
         [NUnit.Framework.CategoryAttribute("fail")]
-        [NUnit.Framework.CategoryAttribute("user")]
-        public virtual void UnsuccessfulCheckAddingABookAsUser()
+        [NUnit.Framework.CategoryAttribute("anonymous")]
+        public virtual void UnsuccessfulCheckAddingABookAsAnonymous()
         {
             string[] tagsOfScenario = new string[] {
                     "fail",
-                    "user"};
+                    "anonymous"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unsuccessful check adding a book as user", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unsuccessful check adding a book as anonymous", null, tagsOfScenario, argumentsOfScenario);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -117,18 +117,9 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 10
-    testRunner.When("I enter \"vip.roman99@mail.ru\" in element with id \"email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 11
-    testRunner.And("I enter \"r47qkuDLJFx7F5U!\" in element with id \"password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
-#line 12
-    testRunner.And("I press element with id \"login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
-#line hidden
-#line 13
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 11
     testRunner.Then("I am not on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -136,17 +127,17 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Unsuccessful check adding a book as anonymous")]
+        [NUnit.Framework.DescriptionAttribute("Unsuccessful check adding a book as user")]
         [NUnit.Framework.CategoryAttribute("fail")]
-        [NUnit.Framework.CategoryAttribute("anonymous")]
-        public virtual void UnsuccessfulCheckAddingABookAsAnonymous()
+        [NUnit.Framework.CategoryAttribute("user")]
+        public virtual void UnsuccessfulCheckAddingABookAsUser()
         {
             string[] tagsOfScenario = new string[] {
                     "fail",
-                    "anonymous"};
+                    "user"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unsuccessful check adding a book as anonymous", null, tagsOfScenario, argumentsOfScenario);
-#line 18
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Unsuccessful check adding a book as user", null, tagsOfScenario, argumentsOfScenario);
+#line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -168,6 +159,15 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 4
 this.FeatureBackground();
+#line hidden
+#line 16
+    testRunner.When("I enter \"vip.roman99@mail.ru\" in element with id \"email\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 17
+    testRunner.And("I enter \"r47qkuDLJFx7F5U!\" in element with id \"password\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+#line hidden
+#line 18
+    testRunner.And("I press element with id \"login\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 19
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -226,11 +226,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 29
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 30
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
     testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
@@ -329,11 +329,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 54
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 55
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 56
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -408,11 +408,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 71
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 72
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 73
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -487,11 +487,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 88
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 89
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 90
     testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
@@ -567,11 +567,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 105
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 106
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 107
     testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
@@ -647,11 +647,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 122
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 123
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 124
     testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
@@ -727,11 +727,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 139
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 140
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 141
     testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
@@ -807,11 +807,11 @@ this.FeatureBackground();
     testRunner.When("I open page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 156
-    testRunner.And("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 157
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
+                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 158
     testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +

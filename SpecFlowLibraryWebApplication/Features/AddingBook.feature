@@ -5,17 +5,17 @@ Background:
     When I open page "Identity/Account/Login"
 
 @fail
+@anonymous
+Scenario: Unsuccessful check adding a book as anonymous
+    When I open page "Home/CreateBook"
+    Then I am not on the page "Home/CreateBook"
+
+@fail
 @user
 Scenario: Unsuccessful check adding a book as user
     When I enter "vip.roman99@mail.ru" in element with id "email"
     * I enter "r47qkuDLJFx7F5U!" in element with id "password"
     * I press element with id "login"
-    When I open page "Home/CreateBook"
-    Then I am not on the page "Home/CreateBook"
-
-@fail
-@anonymous
-Scenario: Unsuccessful check adding a book as anonymous
     When I open page "Home/CreateBook"
     Then I am not on the page "Home/CreateBook"
 
@@ -26,8 +26,8 @@ Scenario: Successful check adding a book as administrator
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "book-name" in element with id "book-name"
     * I enter "authors" in element with id "authors"
@@ -51,8 +51,8 @@ Scenario: Error when adding without cover image
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "book-name" in element with id "book-name"
     * I enter "authors" in element with id "authors"
     * I enter "description" in element with id "description"
@@ -68,8 +68,8 @@ Scenario: Error when adding without book file
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "book-name" in element with id "book-name"
     * I enter "authors" in element with id "authors"
     * I enter "description" in element with id "description"
@@ -85,8 +85,8 @@ Scenario: Error when adding without book name
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "authors" in element with id "authors"
     * I enter "description" in element with id "description"
@@ -102,8 +102,8 @@ Scenario: Error when adding without book authors
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "book-name" in element with id "book-name"
     * I enter "description" in element with id "description"
@@ -119,8 +119,8 @@ Scenario: Error when adding without book description
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "book-name" in element with id "book-name"
     * I enter "authors" in element with id "authors"
@@ -136,8 +136,8 @@ Scenario: Error when adding without book language
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "book-name" in element with id "book-name"
     * I enter "authors" in element with id "authors"
@@ -153,8 +153,8 @@ Scenario: Error when adding without book genre
     * I enter "HKs498R8tpqKvBK!!" in element with id "password"
     * I press element with id "login"
     When I open page "Home/CreateBook"
-    * I am on the page "Home/CreateBook"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
+    Then I am on the page "Home/CreateBook"
+    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.jpg" in element with id "cover-image"
     * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Читаемый код. Или Программирование как искусство\0.pdf" in element with id "book-file"
     * I enter "book-name" in element with id "book-name"
     * I enter "authors" in element with id "authors"

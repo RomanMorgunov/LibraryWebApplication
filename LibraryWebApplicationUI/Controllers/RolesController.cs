@@ -40,10 +40,15 @@ namespace LibraryWebApplicationUI.Controllers
                 {
                     foreach (var error in result.Errors)
                     {
-                        ModelState.AddModelError(string.Empty, error.Description);
+                        ModelState.AddModelError("All", error.Description);
                     }
                 }
             }
+            else
+            {
+                ModelState.AddModelError("All", "Поле Новая роль является обязательным.");
+            }
+
             return View(name);
         }
 
@@ -55,6 +60,7 @@ namespace LibraryWebApplicationUI.Controllers
             {
                 IdentityResult result = await _roleManager.DeleteAsync(role);
             }
+
             return RedirectToAction("Index");
         }
 

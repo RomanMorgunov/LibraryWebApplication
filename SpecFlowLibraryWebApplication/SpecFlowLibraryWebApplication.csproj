@@ -44,7 +44,13 @@
     <Compile Update="Features\AddingBook.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Update="Features\AddingRole.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Update="Features\EditingBook.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\EditUserRoles.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Update="Features\Login.feature.cs">
@@ -56,12 +62,34 @@
     <Compile Update="Features\Registration.feature.cs">
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Update="Features\RemovingRole.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Update="Features\RemovingBook.feature.cs">
+      <DesignTime>True</DesignTime>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
     <SpecFlowFeatureFiles Update="Features\AddingBook.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddingBook.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\AddingRole.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddingRole.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\EditUserRoles.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>EditUserRoles.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\RemovingRole.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RemovingRole.feature.cs</LastGenOutput>
+    </SpecFlowFeatureFiles>
+    <SpecFlowFeatureFiles Update="Features\RemovingBook.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>RemovingBook.feature.cs</LastGenOutput>
     </SpecFlowFeatureFiles>
     <SpecFlowFeatureFiles Update="Features\EditingBook.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
