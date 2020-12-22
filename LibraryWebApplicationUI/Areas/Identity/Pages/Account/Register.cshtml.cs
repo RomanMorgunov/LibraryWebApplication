@@ -132,6 +132,7 @@ namespace LibraryWebApplicationUI.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
+                    // For tests
                     SendConfirmAccountLinkToMail = false;
                     if (SendConfirmAccountLinkToMail)
                     {

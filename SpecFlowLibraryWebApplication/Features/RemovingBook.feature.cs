@@ -132,7 +132,7 @@ this.ScenarioInitialize(scenarioInfo);
     testRunner.And("I open page \"Home/Index\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 16
-    testRunner.Then("I can not find book with name \"book-name changed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I cannot find book with name \"book-name changed\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -13,4 +13,4 @@ Scenario: Successful check editing a book as administrator
     * I am waiting for "500" milliseconds
     * I press element with id "delete-book"
     * I open page "Home/Index"
-    Then I can not find book with name "book-name changed"
+    Then I cannot find book with name "book-name changed"

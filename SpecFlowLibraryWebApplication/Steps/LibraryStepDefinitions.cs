@@ -1,12 +1,8 @@
-﻿using System;
-using System.Linq;
-using System.IO;
-using System.Diagnostics;
+﻿using System.Linq;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using LibraryWebApplicationUI.Data;
 
 namespace SpecFlowLibraryWebApplication
 {
@@ -212,7 +208,7 @@ namespace SpecFlowLibraryWebApplication
             CollectionAssert.Contains(actual, elementName);
         }
 
-        [Then(@"I can not find book with tag ""(.*)"" and name ""(.*)""")]
+        [Then(@"I cannot find book with tag ""(.*)"" and name ""(.*)""")]
         public void ThenICanNotFindBookWithTagAndName(string tag, string elementName)
         {
             ChromeDriver driver = SeleiumDriver;
@@ -224,7 +220,7 @@ namespace SpecFlowLibraryWebApplication
             CollectionAssert.DoesNotContain(actual, elementName);
         }
 
-        [Then(@"I can not find book with name ""(.*)""")]
+        [Then(@"I cannot find book with name ""(.*)""")]
         public void ThenICanNotFindBookWithName(string bookName)
         {
             ChromeDriver driver = SeleiumDriver;

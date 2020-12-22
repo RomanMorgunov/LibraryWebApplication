@@ -12,7 +12,10 @@ namespace LibraryWebApplicationUI.Data
         public DbSet<Book> Books { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options) { }
+            : base(options)
+        {
+            Database.EnsureCreated();
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

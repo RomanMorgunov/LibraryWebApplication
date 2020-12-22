@@ -229,12 +229,12 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 30
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 32
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -332,8 +332,8 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 55
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 56
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -411,8 +411,8 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 72
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 73
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -490,12 +490,12 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 89
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 90
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 91
     testRunner.And("I enter \"authors\" in element with id \"authors\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -570,12 +570,12 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 106
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 107
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 108
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -650,12 +650,12 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 123
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 124
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 125
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -730,12 +730,12 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 140
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 141
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 142
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
@@ -810,12 +810,12 @@ this.FeatureBackground();
     testRunner.Then("I am on the page \"Home/CreateBook\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 157
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 158
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Читаемый код. Или Програ" +
-                        "ммирование как искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Читаемый код. Или Программирование как" +
+                        " искусство\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 159
     testRunner.And("I enter \"book-name\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");

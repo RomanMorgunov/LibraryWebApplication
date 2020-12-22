@@ -29,4 +29,4 @@ Scenario: Successful check removing a role as administrator
     Then I am on the page "Roles"
     When I click on the button the adjacent column of the element name "test role"
     * I open page "Roles"
-    Then I can not find book with tag "td" and name "test role"
+    Then I cannot find book with tag "td" and name "test role"

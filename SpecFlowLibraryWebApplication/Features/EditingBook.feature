@@ -15,8 +15,8 @@ Background:
 @success
 @admin
 Scenario: Successful check editing a book as administrator
-    When I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Изучаем C Sharp. 3-е издание\0.jpg" in element with id "cover-image"
-    * I enter "D:\7 семак\РиСПСиИТ\LibraryWebApplication\Books\Изучаем C Sharp. 3-е издание\0.pdf" in element with id "book-file"
+    When I enter "D:\7 семак\РиСПСиИТ\_курсач\Books\Изучаем C Sharp. 3-е издание\0.jpg" in element with id "cover-image"
+    * I enter "D:\7 семак\РиСПСиИТ\_курсач\Books\Изучаем C Sharp. 3-е издание\0.pdf" in element with id "book-file"
     * I enter "book-name changed" in element with id "book-name"
     * I enter "authors changed" in element with id "authors"
     * I enter "description changed" in element with id "description"

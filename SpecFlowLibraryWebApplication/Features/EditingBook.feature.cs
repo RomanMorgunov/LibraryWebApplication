@@ -141,12 +141,12 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 18
-    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Изучаем C Sharp. 3-е изд" +
-                        "ание\\0.jpg\" in element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.When("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Изучаем C Sharp. 3-е издание\\0.jpg\" in" +
+                        " element with id \"cover-image\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
-    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\LibraryWebApplication\\Books\\Изучаем C Sharp. 3-е изд" +
-                        "ание\\0.pdf\" in element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
+    testRunner.And("I enter \"D:\\7 семак\\РиСПСиИТ\\_курсач\\Books\\Изучаем C Sharp. 3-е издание\\0.pdf\" in" +
+                        " element with id \"book-file\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 20
     testRunner.And("I enter \"book-name changed\" in element with id \"book-name\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");

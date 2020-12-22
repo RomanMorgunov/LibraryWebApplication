@@ -235,7 +235,7 @@ this.FeatureBackground();
     testRunner.And("I open page \"Roles\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "* ");
 #line hidden
 #line 32
-    testRunner.Then("I can not find book with tag \"td\" and name \"test role\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("I cannot find book with tag \"td\" and name \"test role\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
